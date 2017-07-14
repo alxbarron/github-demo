@@ -1,1 +1,11 @@
 Test Git Quick Start demo
+
+git config --global user.name "Nombre Usuario"
+
+git config --global user.email "email@algo.com"
+
+git config status
+
+git clone url.getCantidadSolicitudes
+
+git status
