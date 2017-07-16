@@ -4,8 +4,20 @@ git config --global user.name "Nombre Usuario"
 
 git config --global user.email "email@algo.com"
 
+git config --global --list
+
+git clone url.git
+
 git config status
 
-git clone url.getCantidadSolicitudes
-
 git status
+
+Se crea o edita un archivo
+
+git add nombreArchivo.extension
+
+git commit -m "Mensaje del commit"
+
+git push branchDestino branchOrigen
+
+git config --global core.editor "atom --wait"
