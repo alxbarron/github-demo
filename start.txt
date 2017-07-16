@@ -20,4 +20,7 @@ git commit -m "Mensaje del commit"
 
 git push branchDestino branchOrigen
 
+// Shorcut to add & commit in one command
+git commit -am "Mensaje del commit"
+
 git config --global core.editor "atom --wait"
