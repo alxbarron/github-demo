@@ -32,4 +32,8 @@ git checkout -- nombreArchivo.extension
 // Renombrar archivos desde Git. Se recomienda renombrar antes de modificar
 git mv nombreOrigen.txt nombreDestino.txt
 
+// Si se modifican archivos desde finder, se debe atualizar el indice de Git solo si son arhivos que fueron trackeados por Git
+git add nombreArchivo.extension
+git add -u
+
 git config --global core.editor "atom --wait"
