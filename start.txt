@@ -26,7 +26,10 @@ git commit -am "Mensaje del commit"
 // Quita el archivo de stage
 git reset HEAD nombreArchivo.extension
 
-// Regresa el archivo al estado del ultimo commit, solo si no está en staged 
+// Regresa el archivo al estado del ultimo commit, solo si NO está en staged
 git checkout -- nombreArchivo.extension
+
+// Renombrar archivos desde Git. Se recomienda renombrar antes de modificar
+git mv nombreOrigen.txt nombreDestino.txt
 
 git config --global core.editor "atom --wait"
