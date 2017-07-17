@@ -23,4 +23,10 @@ git push branchDestino branchOrigen
 // Shorcut to add & commit in one command
 git commit -am "Mensaje del commit"
 
+// Quita el archivo de stage
+git reset HEAD nombreArchivo.extension
+
+// Regresa el archivo al estado del ultimo commit, solo si no está en staged 
+git checkout -- nombreArchivo.extension
+
 git config --global core.editor "atom --wait"
