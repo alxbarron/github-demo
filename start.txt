@@ -36,4 +36,11 @@ git mv nombreOrigen.txt nombreDestino.txt
 git add nombreArchivo.extension
 git add -u
 
+// Borrar archivos con Git solo funciona si el archivo ha sido trackeado por Git.
+// Para que el borrado se aplique permanente se debe hacer el commit
+git rm nombreArchivo.extension
+
+Si un archivo es borrado con Git pero aún no se hace el commit y se quiere recuperar, se debe ejecutar checkout y se regresara el archivo al estado desde el ultimo commit
+git checkout -- nombreArchivo.extension
+
 git config --global core.editor "atom --wait"
