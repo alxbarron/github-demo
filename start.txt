@@ -68,3 +68,5 @@ git log --follow -- ruta/nombreArchivo.extension
 
 // Agregar un Alias para un comando muy largo
 git config --global alias.nombreAlias "comando sin prefijo git"
+
+// Excluir archivos del tracking de Git
