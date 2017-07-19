@@ -7,6 +7,8 @@ git config --global user.email "email@algo.com"
 git config --global --list
 
 git config --global core.editor "atom --wait"
+// Muestra el archivo de configuración de Git
+atom ~/.gitconfig
 
 git clone url.git
 
@@ -50,7 +52,7 @@ git log
 // Historial con IDs de commit cortos
 git log --abbrev-commit
 
-// Muestra el log en una sola linea, grafíca ASCII, agrega lebels o anotaciones que identifican un commit
+// Muestra el log en una sola linea, graph ACII, agrega lebels o anotaciones que identifican un commit
 git log --oneline --graph --decorate
 
 // Muestra un rango de commits
@@ -62,4 +64,7 @@ git log --since="3 days ago"
 // Muestra los commits donde esta involucrado un archivo
 git log -- nombreArchivo.extension
 
-gir log --follow -- ruta/nombreArchivo.extension
+git log --follow -- ruta/nombreArchivo.extension
+
+// Agregar un Alias para un comando muy largo
+git config --global alias.nombreAlias "comando sin prefijo git"
