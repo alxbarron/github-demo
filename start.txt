@@ -6,6 +6,10 @@ git config --global user.email "email@algo.com"
 
 git config --global --list
 
+git config --global core.editor "atom --wait"
+// Muestra el archivo de configuración de Git
+atom ~/.gitconfig
+
 git clone url.git
 
 git config status
@@ -20,4 +24,49 @@ git commit -m "Mensaje del commit"
 
 git push branchDestino branchOrigen
 
-git config --global core.editor "atom --wait"
+// Shorcut to add & commit in one command
+git commit -am "Mensaje del commit"
+
+// Quita el archivo de stage
+git reset HEAD nombreArchivo.extension
+
+// Regresa el archivo al estado del ultimo commit, solo si NO está en staged
+git checkout -- nombreArchivo.extension
+
+// Renombrar archivos desde Git. Se recomienda renombrar antes de modificar
+git mv nombreOrigen.txt nombreDestino.txt
+
+// Si se modifican archivos desde finder, se debe atualizar el indice de Git solo si son arhivos que fueron trackeados por Git
+git add nombreArchivo.extension
+git add -u
+
+// Borrar archivos con Git solo funciona si el archivo ha sido trackeado por Git. Para que el borrado se aplique permanente se debe hacer el commit
+git rm nombreArchivo.extension
+
+// Si un archivo es borrado con Git pero aún no se hace el commit y se quiere recuperar, se debe ejecutar checkout y se regresara el archivo al estado desde el ultimo commit
+git checkout -- nombreArchivo.extension
+
+// Historial de Commits
+git log
+
+// Historial con IDs de commit cortos
+git log --abbrev-commit
+
+// Muestra el log en una sola linea, graph ACII, agrega lebels o anotaciones que identifican un commit
+git log --oneline --graph --decorate
+
+// Muestra un rango de commits
+git log fromIdCommit...toIdCommit
+
+// Muestra los commits de los ultimos 3 días
+git log --since="3 days ago"
+
+// Muestra los commits donde esta involucrado un archivo
+git log -- nombreArchivo.extension
+
+git log --follow -- ruta/nombreArchivo.extension
+
+// Agregar un Alias para un comando muy largo
+git config --global alias.nombreAlias "comando sin prefijo git"
+
+// Excluir archivos del tracking de Git
