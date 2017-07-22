@@ -70,3 +70,20 @@ git log --follow -- ruta/nombreArchivo.extension
 git config --global alias.nombreAlias "comando sin prefijo git"
 
 // Excluir archivos del tracking de Git
+atom .gitignore
+
+// Luego de instalar P4Merge (Diff visual tool) configuramos la herramienta de Diff en Git
+// Asigna P4Merge como herramienta de Diff
+git config --global diff.tool p4merge
+git config --global difftool.p4merge.path /Applications/p4merge.app/Contents/MacOS/p4merge
+// Desactiva el lanzamiento de terminal en cada merge
+git config --global difftool.prompt false
+
+// Luego configuramos la herramienta para merge en Git
+git config --global merge.tool p4merge
+git config --global mergetool.p4merge.path /Applications/p4merge.app/Contents/MacOS/p4merge
+// Desactiva el lanzamiento de terminal en cada merge
+git config --global mergetool.prompt false
+
+// Validar configuración
+git config --global --list
