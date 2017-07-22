@@ -87,3 +87,28 @@ git config --global mergetool.prompt false
 
 // Validar configuración
 git config --global --list
+
+// Ver la diferencia de archivos entre staged y directorio de trabajo
+git diff
+git difftool
+// Ver la diferencia de archivos entre ultimo commit y directorio de trabajo
+git diff HEAD
+git difftool HEAD
+// Ver la diferencia de archivos entre ultimo commit y staged
+git diff --staged HEAD
+git difftool --staged HEAD
+
+// Para ver la diferencia de archivos pero solo de uno a las vez
+git diff -- nombreArchivo
+
+// Comparar cualquier commit con el ultimo commit
+git diff idCommit HEAD
+
+// Comparar ultimo commit con el ultimo commit menos uno
+git diff HEAD HEAD^
+
+// Comparar commits especificos
+git diff idCommitUno idCommitDos
+
+// Comparar dos branch, en este caso la rama local vs rama remota
+git diff master origin/master
